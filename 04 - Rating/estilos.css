@@ -1,0 +1,53 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    background:#fcf7f4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+
+.rating {
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+ }
+  
+span {
+  font-size: 4em;
+  display: inline-block;
+  position: relative;
+  color:#ff2407;
+  cursor:pointer;
+  padding: 1em;
+  transition: color 0.5s ease;
+}
+
+span:hover,
+
+span:hover ~ span {
+  color: transparent;
+}
+
+span:hover:before,
+span:hover ~ span:before {
+   content: "\263B";
+   position: absolute;
+   left: 1em; 
+   color:#ff2407;
+}
+
+span.active,
+span.active ~ span {
+  color: transparent;
+}
+
+span.active:before ,
+span.active ~ span:before {
+   content: "\263B";
+   position: absolute;
+   left: 1em; 
+   color: rgb(10, 10, 10); 
+}
